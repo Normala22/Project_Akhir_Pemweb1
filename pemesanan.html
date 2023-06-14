@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pemesanan Wisata</title>
+    <link rel="stylesheet" type="text/css" href="style3.css">
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <a href="latihanPa.html" class="logo">Kembali Ke Beranda</a>
+      </div>
+    </header>
+    <section class="hero">
+      <div class="container">
+        <h1>Pesan Paket Wisata</h1>
+        <p><b>Silahkan isi formulir pemesanan berikut ini</b></p>
+      </div>
+    </section>
+    <section class="content">
+      <div class="container">
+        <h2>Rincian Paket Wisata</h2>
+        <form id="orderForm" onchange="sortTempatWisata()">
+          <div>
+            <label for="namatempat">Nama Tempat Wisata:</label>
+            <select id="namatempat" name="namatempat" onchange="updateHarga()" required>
+              <option value="">-- Pilih Tempat Wisata --</option>
+              <option value="Air Terjun Manyandar">Air Terjun Manyandar</option>
+              <option value="Gunung Hantanung">Gunung Hantanung</option>
+              <option value="Gunung Hauk">Gunung Hauk</option>
+              <option value="Gunung Titi">Gunung Titi</option>
+              <option value="Air Terjun Tumate">Air Terjun Tumate</option>
+              <option value="Lok Baintan">Lok Baintan</option>
+              <option value="Tahura Sultan Adam">Tahura Sultan Adam</option>
+              <option value="Waduk Riam Kanan">Waduk Riam Kanan</option>
+              <option value="Pulau Pinus">Pulau Pinus</option>
+              <option value="Air Terjun Panayar">Air Terjun Panayar</option>
+              <option value="Pulau Kembang di Tengah Sungai Barito">Pulau Kembang di Tengah Sungai Barito</option>
+              <option value="Pulau Kaget Habitat Kera Belanda">Pulau Kaget Habitat Kera Belanda</option>
+              <option value="Pulau Bakut Pulau Asli Monyet Bekantan">Pulau Bakut Pulau Asli Monyet Bekantan</option>
+              <option value="Jembatan Rumpiang di Atas Sungai Barito">Jembatan Rumpiang di Atas Sungai Barito</option>
+              <option value="Jembatan Barito">Jembatan Barito</option>
+              <option value="Air Terjun Riam Hanai">Air Terjun Riam Hanai</option>
+              <option value="Air Terjun Kilat Api">Air Terjun Kilat Api</option>
+              <option value="Tebing Batu Laki">Tebing Batu Laki</option>
+              <option value="Pulau Mas">Pulau Mas</option>
+              <option value="Manggasang">Manggasang</option>
+              <option value="Gunung Halau-Halau">Gunung Halau-Halau</option>
+              <option value="Lok Laga">Lok Laga</option>
+              <option value="Bukit Rindang">Bukit Rindang</option>
+              <option value="Baruh Bunga">Baruh Bunga</option>
+              <option value="Tugu Burung Sulangking">Tugu Burung Sulangking</option>
+              <option value="Danau Caramin">Danau Caramin</option>
+              <option value="Danau Biru Tabur">Danau Biru Tabur</option>
+              <option value="Titian Panjang">Titian Panjang</option>
+              <option value="Candi Agung">Candi Agung</option>
+              <option value="Siring Kota Amuntai">Siring Kota Amuntai</option>
+              <option value="Pulau Birah-birahan">Pulau Birah-birahan</option>
+              <option value="Pulau Samber Gelap">Pulau Samber Gelap</option>
+              <option value="Pulau Pamalikan">Pulau Pamalikan</option>
+              <option value="Pantai Teluk Gosong">Pantai Teluk Gosong</option>
+              <option value="Air Terjun Tumpang Dua">Air Terjun Tumpang Dua</option>
+              <option value="Air Terjun Tangkum">Air Terjun Tangkum</option>
+              <option value="Tugu Obor Api">Tugu Obor Api</option>
+              <option value="Museum Lewu Hante">Museum Lewu Hante</option>
+              <option value="Danau Cermin">Danau Cermin</option>
+              <option value="Goa Liang Tapah">Goa Liang Tapah</option>
+              <option value="Air Terjun Mandin Damar">Air Terjun Mandin Damar</option>
+              <option value="Pantai Rindu Alam">Pantai Rindu Alam</option>
+              <option value="Pantai Angsana">Pantai Angsana</option>
+              <option value="Danau Biru Batu Licin">Danau Biru Batu Licin</option>
+              <option value="Goa Liang Bangkai">Goa Liang Bangkai</option>
+              <option value="Bukit Lebak Naga">Bukit Lebak Naga</option>
+              <option value="Wisata Bekantan">Wisata Bekantan</option>
+              <option value="Menara Pengawas Tentara Jepang">Menara Pengawas Tentara Jepang</option>
+              <option value="Pantai Turki">Pantai Turki</option>
+              <option value="Air Terjun Bajuin">Air Terjun Bajuin</option>
+              <option value="Bukit Menggindang">Bukit Menggindang</option>
+              <option value="Kanal Lok Buntar">Kanal Lok Buntar</option>
+              <option value="Air Terjun Lanjung Bapayung">Air Terjun Lanjung Bapayung</option>
+              <option value="Kawasan Perbukitan Lereng Meratus">Kawasan Perbukitan Lereng Meratus</option>
+              <option value="Air Terjun Mandin">Air Terjun Mandin</option>
+              <option value="Taman Hutan Raya Sultan Adam">Taman Hutan Raya Sultan Adam</option>
+              <option value="Danau Seran">Danau Seran</option>
+              <option value="Bukit Batas Aranio">Bukit Batas Aranio</option>
+              <option value="Bukit Matang Kaladan">Bukit Matang Kaladan</option>
+              <option value="Bukit Lentera">Bukit Lentera</option>
+              <option value="Museum WASAKA">Museum WASAKA</option>
+              <option value="Pulau Bakut">Pulau bakut</option>
+              <option value="Taman Satwa">Taman Satwa</option>
+              <option value="Waterboom Banua Anyar">Waterboom Banua Anyar</option>
+              <option value="Hutan Pinus Mentaos">Hutan Pinus Mentaos</option>
+            </select>
+          </div>
+          <div>
+            <label for="harga">Harga Tiket:</label>
+            <input type="text" id="harga" name="harga" readonly required>
+          </div>
+        </form>
+        <h2>Formulir Pemesanan</h2>
+        <form id="orderForm">
+          <div>
+            <label for="namaLengkap">Nama Lengkap:</label>
+            <input type="text" id="namaLengkap" name="namaLengkap" required>
+          </div>
+          <div>
+            <label for="alamatEmail">Alamat Email:</label>
+            <input type="email" id="alamatEmail" name="alamatEmail" required>
+          </div>
+          <div>
+            <label for="nomorTelepon">Nomor Telepon:</label>
+            <input type="tel" id="nomorTelepon" name="nomorTelepon" required>
+          </div>
+          <div>
+            <label for="tanggalPemesanan">Tanggal Pemesanan:</label>
+            <input type="date" id="tanggalPemesanan" name="tanggalPemesanan" required>
+          </div>
+          <div>
+            <label for="jumlahOrang">Jumlah Orang:</label>
+            <input type="number" id="jumlahOrang" name="jumlahOrang" min="1" required>
+          </div>
+          <div>
+            <label for="metodePembayaran">Metode Pembayaran:</label>
+            <select id="metodePembayaran" name="metodePembayaran" required>
+              <option value="">-- Pilih Metode Pembayaran --</option>
+              <option value="Pembayaran Langsung">Pembayaran Langsung</option>
+            </select>
+          </div>
+          <div id="uploadField" style="display: none;">
+            <label for="buktiPembayaran">Bukti Pembayaran:</label>
+            <input type="file" id="buktiPembayaran" name="buktiPembayaran">
+          </div>
+          <div>
+            <label for="catatan">Catatan:</label>
+            <textarea id="catatan" name="catatan"></textarea>
+          </div>
+          <button type="submit" onclick="generateImage(event)">Pesan Sekarang</button>
+        </form>
+      </div>
+    </section>
+    <footer>
+      <div class="container">
+        <p>&copy; 2023 Tour Wisata. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+
+     // Ambil referensi elemen dropdown dan input harga
+      const dropdownTempat = document.getElementById('namatempat');
+      const inputHarga = document.getElementById('harga');
+
+      // Objek yang menyimpan daftar tempat wisata beserta harganya
+      const daftarTempatWisata = {
+        'Air Terjun Manyandar': 30000,
+        'Gunung Hantanung': 50000,
+        'Gunung Hauk': 40000,
+        'Gunung Titi': 50000,
+        'Air Terjun Tumate': 50000,
+        'Lok Baintan': 25000,
+        'Tahura Sultan Adam': 50000,
+        'Waduk Riam Kanan': 40000,
+        'Pulau Pinus': 30000,
+        'Air Terjun Panayar': 35000,
+        'Pulau Kembang di Tengah Sungai Barito': 30000,
+        'Pulau Kaget Habitat Kera Belanda': 19000,
+        'Pulau Bakut Pulau Asli Monyet Bekantan': 20000,
+        'Jembatan Rumpiang di Atas Sungai Barito': 22000,
+        'Jembatan Barito': 10000,
+        'Air Terjun Riam Hanai': 40000,
+        'Air Terjun Kilat Api': 50000,
+        'Tebing Batu Laki': 55000,
+        'Pulau Mas': 43000,
+        'Manggasang': 45000,
+        'Gunung Halau-Halau': 30000,
+        'Lok Laga': 40000,
+        'Bukit Rindang': 42000,
+        'Baruh Bunga': 30000,
+        'Tugu Burung Sulangking': 35000,
+        'Danau Caramin': 35000,
+        'Danau Biru Tabur': 40000,
+        'Titian Panjang': 42000,
+        'Candi Agung': 50000,
+        'Siring Kota Amuntai': 50000,
+        'Pulau Birah-birahan': 30000,
+        'Pulau Samber Gelap': 19000,
+        'Pulau Pamalikan': 20000,
+        'Pantai Teluk Gosong': 22000,
+        'Air Terjun Tumpang Dua': 10000,
+        'Air Terjun Tangkum': 30000,
+        'Tugu Obor Api': 50000,
+        'Museum Lewu Hante': 40000,
+        'Danau Cermin': 50000,
+        'Goa Liang Tapah': 45000,
+        'Air Terjun Mandin Damar': 25000,
+        'Pantai Rindu Alam': 50000,
+        'Pantai Angsana': 40000,
+        'Danau Biru Batu Licin': 46000,
+        'Goa Liang Bangkai': 49000,
+        'Bukit Lebak Naga': 38000,
+        'Wisata Bekantan': 50000,
+        'Menara Pengawas Tentara Jepang': 40000,
+        'Pantai Turki': 50000,
+        'Air Terjun Bajuin': 50000,
+        'Bukit Menggindang': 40000,
+        'Kanal Lok Buntar': 50000,
+        'Air Terjun Lanjung Bapayung': 40000,
+        'Kawasan Perbukitan Lereng Meratus': 50000,
+        'Air Terjun Mandin': 55000,
+        'Taman Hutan Raya Sultan Adam': 25000,
+        'Danau Seran': 50000,
+        'Bukit Batas Aranio': 40000,
+        'Bukit Matang Kaladan': 37000,
+        'Bukit Lentera': 34000,
+        'Museum WASAKA': 30000,
+        'Pulau Bakut': 20000,
+        'Taman Satwa': 30000,
+        'Waterboom Banua Anyar': 24000,
+        'Hutan Pinus Mentaos': 25000,
+      };
+
+      function sortTempatWisata() {
+        const select = document.getElementById('namatempat');
+        const options = Array.from(select.options);
+
+        options.sort((a, b) => {
+          return a.text.localeCompare(b.text, 'id');
+        });
+
+        options.forEach(option => {
+          select.appendChild(option);
+        });
+      }
+
+// Panggil fungsi sortTempatWisata saat halaman dimuat
+window.addEventListener('DOMContentLoaded', sortTempatWisata);
+
+      // Fungsi untuk mengubah nilai input harga berdasarkan pilihan dropdown
+      function updateHarga() {
+        const tempat = dropdownTempat.value;
+        const harga = daftarTempatWisata[tempat];
+
+        // Ubah nilai input harga
+        inputHarga.value = harga ? harga : '';
+      }
+
+    function generateImage(event) {
+      const tempatWisata = document.getElementById('namatempat');
+      const namaTempatWisata = tempatWisata.options[tempatWisata.selectedIndex].text;
+      const tempatWisataValue = namaTempatWisata;
+      const tempatWisataText = namaTempatWisata;
+      event.preventDefault(); // mencegah pengiriman formulir
+
+      const namatempat = document.getElementById('namatempat').value;
+      const harga = document.getElementById('harga').value;
+      const namaLengkap = document.getElementById('namaLengkap').value;
+      const alamatEmail = document.getElementById('alamatEmail').value;
+      const nomorTelepon = document.getElementById('nomorTelepon').value;
+      const tanggalPemesanan = document.getElementById('tanggalPemesanan').value;
+      const jumlahOrang = document.getElementById('jumlahOrang').value;
+      const metodePembayaran = document.getElementById('metodePembayaran').value;
+      const buktiPembayaran = document.getElementById('buktiPembayaran').value;
+      const catatan = document.getElementById('catatan').value;
+
+    // Validasi formulir sebelum menghasilkan gambar
+    if (
+      namatempat === '' ||
+      harga === '' ||
+      namaLengkap === '' ||
+      alamatEmail === '' ||
+      nomorTelepon === '' ||
+      tanggalPemesanan === '' ||
+      jumlahOrang === '' ||
+      metodePembayaran === ''
+    ) {
+      alert('Harap isi semua field formulir sebelum melanjutkan!');
+      return;
+    }
+
+      //menghitung total harga tiket
+      const totalHarga = harga * jumlahOrang;
+      // buat canvas
+      const canvas = document.createElement('canvas');
+      const context = canvas.getContext('2d');
+      canvas.width = 500;
+      canvas.height = 300;
+
+      // Background image
+      const backgroundImage = new Image();
+      backgroundImage.src = 'images/ticket_bg.png';
+      backgroundImage.onload = function() {
+      context.drawImage(backgroundImage, 0, 0, canvas.width, canvas.height);
+
+        // Text style
+        context.fillStyle = '#000000';
+        context.font = 'bold 18px comic sans ms';
+
+        // Rincian Paket Wisata
+        context.textAlign = 'left';
+        context.fillText('Rincian Paket Wisata:', 30, 70);
+        context.font = 'bold 16px comic sans ms';
+        context.fillText('Nama Tempat Wisata: ' + namatempat, 30, 100);
+        context.fillText('Harga Tiket: ' + harga, 30, 120);
+
+        // Formulir Pemesanan
+        context.textAlign = 'left';
+        context.font = 'bold 16px comic sans ms';
+        context.fillText('Nama Lengkap : ' + namaLengkap, 30, 140);
+        context.fillText('Nomor Telepon : ' + nomorTelepon, 30, 160);
+        context.fillText('Tanggal Pemesanan : ' + tanggalPemesanan, 30, 180);
+        context.fillText('Jumlah Orang : ' + jumlahOrang, 30, 200);
+        context.fillText('Metode Pembayaran : ' + metodePembayaran, 30, 220);
+        context.fillText('Total Pembayaran : ' + totalHarga, 30, 240);
+        context.fillText('Catatan : ' + catatan, 30, 260);
+
+        // Ubah kanvas menjadi gambar dan unduh
+        const dataURL = canvas.toDataURL('image/png');
+        const link = document.createElement('a');
+        link.href = dataURL;
+        link.download = 'tiket_wisata.png';
+        link.click();
+      };
+      alert('Terimakasih Telah Memesan Tiket Pada website Kami, Harap Membawa Bukti Tiket Yang Telah Diunduh Pada Saat Melakukan Transaksi Pembayaran di Bus!!');
+    }
+  </script>
+  </body>
+</html>

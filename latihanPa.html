@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Tour Wisata</title>
+	<link rel="stylesheet" href="stylePa.css">
+</head>
+<body>
+	<header>
+		<nav>
+			<ul>
+				<li><a href="latihanPa.html">Beranda</a></li>
+				<li><a href="pemesanan.html">Pemesanan Tiket</a></li>
+                <li><a href="halaman tentang kami.html">Tentang Kami</a></li>
+				<li><a href="login_new.html">Login</a></li>
+			</ul>
+		</nav>
+		<h1>Tour Wisata</h1>
+		<h2>Temukan Wisata Impianmu Bersama Kami</h2>
+		<form id="search-form">
+			<select id="search-dropdown">
+			  <option value="">~ Pilih Kabupaten ~</option>
+			  <option value="detailblg.html">Kabupaten Balangan</option>
+			  <option value="detailbanjar.html">Kabupaten Banjar</option>
+			  <option value="detailbatola.html">Kabupaten Barito Kuala</option>
+			  <option value="detailHSS.html">Kabupaten Hulu Sungai Selatan</option>
+			  <option value="detailHST.html">Kabupaten Hulu sungai Tengah</option>
+			  <option value="detailHSU.html">Kabupaten Hulu sungai Utara</option>
+			  <option value="detailKB.html">Kabupaten Kotabaru</option>
+			  <option value="detailTaba.html">Kabupaten Tabalong</option>
+			  <option value="detailTB.html">Kabupaten Tanah Bumbu</option>
+			  <option value="detailTL.html">Kabupaten Tanah Laut</option>
+			  <option value="detailtapin.html">Kabupaten Tapin</option>
+			  <option value="detailBJB.html">Kota Banjarbaru</option>
+			  <option value="detailBJM.html">Kota Banjarmasin</option>
+			</select>
+			<button type="submit" onclick="searchByDropdown()">Cari</button>
+		  </form>
+	</header>
+	<main>
+		<div class="card-container">
+			<div class="card">
+				<img src="images/balangan.jpg" alt="tugu balangan">
+				<h4>Kabupaten Balangan</h4>
+				<a href="detailblg.html">Lihat Detail</a>
+			</div>
+			<div class="card">
+				<img src="images/kabbanjar.jpg" alt="banjar">
+				<h4>Kabupaten Banjar</h4>
+				<a href="detailbanjar.html">Lihat Detail</a>
+			</div>
+			<div class="card">
+				<img src="images/barito-kuala.jpeg" alt="batola">
+				<h4>Kabupaten Barito Kuala</h4>
+				<a href="detailbatola.html">Lihat Detail</a>
+			</div>
+			<div class="card">
+				<img src="images/huluselatan.jpg" alt="hss">
+				<h4>Kabupaten Hulu Sungai Selatan</h4>
+				<a href="detailHSS.html">Lihat Detail</a>
+			</div>
+			<div class="card">
+				<img src="images/hulutengah.jpg" alt="hst">
+				<h4>Kabupaten Hulu sungai Tengah </h4>
+				<a href="detailHST.html">Lihat Detail</a>
+			</div>
+            <div class="card">
+				<img src="images/huluUtara.jpg" alt="hsu">
+				<h4>Kabupaten Hulu sungai Utara</h4>
+				<a href="detailHSU.html">Lihat Detail</a>
+			</div>
+			<div class="card">
+				<img src="images/kabkotabaru.jpeg" alt="kotabaru">
+				<h4>Kabupaten Kotabaru</h4>
+				<a href="detailKB.html">Lihat Detail</a>
+			</div>
+			<div class="card">
+				<img src="images/kabtabalong.jpg" alt="tabalong">
+				<h4>Kabupaten Tabalong</h4>
+				<a href="detailTaba.html">Lihat Detail</a>
+			</div>
+			<div class="card">
+				<img src="images/kabtanahbumbu.jpg" alt="tanah bumbu">
+				<h4>Kabupaten Tanah Bumbu</h4>
+				<a href="detailTB.html">Lihat Detail</a>
+			</div>
+			<div class="card">
+				<img src="images/kabtanahlaut.jpg" alt="tanah laut">
+				<h4>Kabupaten Tanah Laut</h4>
+				<a href="detailTL.html">Lihat Detail</a>
+			</div>
+			<div class="card">
+				<img src="images/kabtapin.jpg" alt="tapin">
+				<h4>Kabupaten Tapin</h4>
+				<a href="detailtapin.html">Lihat Detail</a>
+			</div>
+			<div class="card">
+				<img src="images/tugu-banjarbaru.jpeg" alt="tugu banjarbaru">
+				<h4>Kota Banjarbaru</h4>
+				<a href="detailBJB.html">Lihat Detail</a>
+			</div>
+			<div class="card">
+				<img src="images/kotaBanjarmasin.jpg" alt="banjarmasin">
+				<h4>Kota Banjarmasin</h4>
+				<a href="detailBJM.html">Lihat Detail</a>
+			</div>
+        </div>
+    </main>
+	<footer>
+        <p>&copy; 2023 Tour Wisata. All rights reserved.</p>
+    </footer>
+	<script>
+		function searchByDropdown() {
+		  var dropdown = document.getElementById("search-dropdown");
+		  var selectedValue = dropdown.options[dropdown.selectedIndex].value;
+		  if (selectedValue) {
+			document.getElementById("search-form").action = selectedValue;
+			document.getElementById("search-form").submit();
+		  }
+		}
+	  </script>
+</body>
+</html>
